@@ -24,6 +24,9 @@ workflows:
             df -kh
             
             sysctl -n machdep.cpu.brand_string
+            
+            # CPU core count
+            sysctl -n hw.ncpu
     - xcode-test@2.0.0:
         inputs:
         - project_path: $BITRISE_PROJECT_PATH
