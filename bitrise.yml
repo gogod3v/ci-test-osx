@@ -22,6 +22,8 @@ workflows:
             set -ex
             
             df -kh
+            
+            sysctl -n machdep.cpu.brand_string
     - xcode-test@2.0.0:
         inputs:
         - project_path: $BITRISE_PROJECT_PATH
