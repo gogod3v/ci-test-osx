@@ -16,6 +16,12 @@ workflows:
     steps:
     - script@1.1.5:
         title: Do anything with Script step
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+            set -ex
+            
+            df -kh
     - xcode-test@2.0.0:
         inputs:
         - project_path: $BITRISE_PROJECT_PATH
