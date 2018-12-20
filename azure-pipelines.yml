@@ -11,7 +11,7 @@ pool:
 
 steps:
 - script: |
-    brew install bitrise
+    brew update && brew install bitrise
     bitrise setup
   displayName: 'install bitrise cli'
 
