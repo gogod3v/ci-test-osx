@@ -1,7 +1,7 @@
-# Xcode
-# Build, test, and archive an Xcode workspace on macOS.
-# Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
 
 trigger:
 - master
@@ -10,11 +10,11 @@ pool:
   vmImage: 'macOS-10.13'
 
 steps:
-- task: Xcode@10
-  inputs:
-    actions: 'build'
-    scheme: ''
-    sdk: 'iphoneos'
-    configuration: 'Release'
-    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-    xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+- script: |
+    brew install bitrise
+    bitrise setup
+  displayName: 'install bitrise cli'
+
+- script: |
+    bitrise run primary
+  displayName: 'bitrise run primary'
