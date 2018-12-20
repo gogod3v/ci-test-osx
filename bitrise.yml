@@ -25,6 +25,7 @@ workflows:
         inputs:
         - project_path: $BITRISE_PROJECT_PATH
         - scheme: $BITRISE_SCHEME
+        - output_tool: xcodebuild
     - xcode-archive@2.4.16:
         inputs:
         - project_path: $BITRISE_PROJECT_PATH
