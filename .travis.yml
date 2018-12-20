@@ -1,6 +1,6 @@
 language: objective-c
 osx_image: xcode10.1
 script:
-- brew install bitrise
+- brew update && brew install bitrise
 - bitrise setup
 - bitrise run primary
