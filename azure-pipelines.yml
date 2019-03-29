@@ -11,6 +11,10 @@ pool:
 
 steps:
 - script: |
+    /bin/bash -c "sudo xcode-select -s /Applications/Xcode_10.1.app/Contents/Developer"
+  displayName: 'Select Xcode 10.1'
+
+- script: |
     brew update && brew install bitrise
     bitrise setup
   displayName: 'install bitrise cli'
