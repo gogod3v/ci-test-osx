@@ -1,3 +1,3 @@
-# ci-test-osx
+# macOS CI Tests
 
 CI setups.
