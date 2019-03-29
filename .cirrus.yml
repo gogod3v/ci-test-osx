@@ -3,10 +3,13 @@ osx_instance:
 
 task:
   name: 'install bitrise cli'
-  script: 'brew update && brew install bitrise && bitrise setup'
+  script:
+  - 'brew update && brew install bitrise'
+  - 'bitrise setup'
+  - 'bitrise run primary'
 
-task:
-  name: 'bitrise run primary'
-  depends_on:
-  - 'install bitrise cli'
-  script: 'bitrise run primary'
+#task:
+#  name: 'bitrise run primary'
+#  depends_on:
+#  - 'install bitrise cli'
+#  script: 'bitrise run primary'
