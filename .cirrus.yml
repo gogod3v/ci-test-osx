@@ -1,5 +1,15 @@
 osx_instance:
-  image: mojave-xcode-10.2
+  image: mojave-xcode-10.1
 
 task:
-  script: echo "Hello World from macOS!"
+  name: 'install bitrise cli'
+  script:
+  - 'brew update && brew install bitrise'
+  - 'bitrise setup'
+  - 'bitrise run primary'
+
+#task:
+#  name: 'bitrise run primary'
+#  depends_on:
+#  - 'install bitrise cli'
+#  script: 'bitrise run primary'
