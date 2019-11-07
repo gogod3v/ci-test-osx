@@ -9,5 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: available xcodes
+      run: ls -alh /Applications | grep -i 'Xcode*'
     - name: xcodebuild version
       run: xcodebuild -version
