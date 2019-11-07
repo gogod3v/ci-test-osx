@@ -1,0 +1,15 @@
+name: Birise run primary
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install
+      run: brew update && brew install bitrise && bitrise setup
+    - name: Run
+      run: bitrise run primary
