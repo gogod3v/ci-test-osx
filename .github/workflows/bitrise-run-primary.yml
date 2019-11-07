@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Xcode simulators
+      run: xcversion simulators
     - name: Install
       run: brew update && brew install bitrise && bitrise setup
     - name: Run
