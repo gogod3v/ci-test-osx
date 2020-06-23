@@ -11,6 +11,7 @@ pool:
 
 steps:
 - script: |
+    /bin/bash -c "ls -alh /Applications/ | grep -i xcode"
     /bin/bash -c "sudo xcode-select -s /Applications/Xcode_10.1.app/Contents/Developer"
   displayName: 'Select Xcode 10.1'
 
