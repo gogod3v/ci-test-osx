@@ -1,6 +1,6 @@
 # iOS CircleCI 2.0 configuration file
 #
-# Check https://circleci.com/docs/2.0/ios-migrating-from-1-2/ for more details
+# Available images: https://circleci.com/docs/2.0/testing-ios/
 #
 version: 2
 jobs:
@@ -8,7 +8,7 @@ jobs:
 
     # Specify the Xcode version to use
     macos:
-      xcode: "10.1.0"
+      xcode: "12.4.0"
 
     steps:
       - checkout
@@ -16,6 +16,7 @@ jobs:
       - run:
           name: Install Bitrise CLI
           command: |
+            set -ex
             brew update && brew install bitrise
             bitrise setup
 
