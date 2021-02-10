@@ -1,3 +1,3 @@
 # macOS CI Tests
 
-CI setups.
+CI setups and comparison.
