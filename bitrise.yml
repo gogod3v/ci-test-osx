@@ -36,8 +36,8 @@ workflows:
 
             brew install cavaliercoder/dmidecode/dmidecode
             dmidecode -s system-product-name
-    - xcode-test@2:
-        inputs:
-        - project_path: $BITRISE_PROJECT_PATH
-        - scheme: $BITRISE_SCHEME
-        - output_tool: xcodebuild
+#     - xcode-test@2:
+#         inputs:
+#         - project_path: $BITRISE_PROJECT_PATH
+#         - scheme: $BITRISE_SCHEME
+#         - output_tool: xcodebuild
