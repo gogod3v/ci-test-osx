@@ -16,6 +16,7 @@ jobs:
       - run:
           name: Install Bitrise CLI
           command: |
+            set -ex
             brew update && brew install bitrise
             bitrise setup
 
