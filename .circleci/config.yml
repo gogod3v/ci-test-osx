@@ -8,7 +8,7 @@ jobs:
 
     # Specify the Xcode version to use
     macos:
-      xcode: "13.3.1"
+      xcode: "13.2.1"
 
     steps:
       - checkout
