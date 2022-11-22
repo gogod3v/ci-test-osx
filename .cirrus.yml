@@ -1,6 +1,6 @@
 # Available images https://cirrus-ci.org/guide/macOS/
 macos_instance:
-  image: big-sur-xcode-12.4
+  image: ghcr.io/cirruslabs/macos-ventura-base:latest
 
 task:
   name: 'install bitrise cli'
