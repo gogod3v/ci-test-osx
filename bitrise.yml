@@ -34,7 +34,7 @@ workflows:
             #!/usr/bin/env bash
             set -ex
 
-            brew install cavaliercoder/dmidecode/dmidecode
+            brew update && brew install cavaliercoder/dmidecode/dmidecode
             dmidecode -s system-product-name
 #     - xcode-test@2:
 #         inputs:
