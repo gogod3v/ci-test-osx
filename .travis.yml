@@ -1,6 +1,6 @@
-language: objective-c
+os: osx
 # Available image list: https://docs.travis-ci.com/user/reference/osx/
-osx_image: xcode12.2
+osx_image: xcode14.1
 script:
 - brew update && brew install bitrise
 - bitrise setup

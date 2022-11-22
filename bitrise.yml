@@ -27,6 +27,10 @@ workflows:
 
             # CPU core count
             sysctl -n hw.ncpu
+    - resource-archive@2:
+        inputs:
+        - extract_to_path: ./_tmp
+        - archive_url: https://github.com/acidanthera/dmidecode/releases/download/3.4a/dmidecode-mac-3.4a.zip
     - script@1:
         title: dmidecode
         inputs:
@@ -34,8 +38,7 @@ workflows:
             #!/usr/bin/env bash
             set -ex
 
-            brew install cavaliercoder/dmidecode/dmidecode
-            dmidecode -s system-product-name
+            ./_tmp/dmidecode -s system-product-name
 #     - xcode-test@2:
 #         inputs:
 #         - project_path: $BITRISE_PROJECT_PATH
