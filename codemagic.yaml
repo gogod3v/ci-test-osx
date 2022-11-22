@@ -1,8 +1,12 @@
 workflows:
   my-workflow:
     scripts:
-      - name: Run CI test
+      - name: CLI setup
         script: |
           set -ex
           brew update && brew install bitrise
           bitrise setup
+      - name: Run
+        script: |
+          set -ex
+          bitrise run primary
