@@ -1,5 +1,7 @@
 workflows:
   my-workflow:
+    environment:
+      xcode: 14.3
     scripts:
       - name: CLI setup
         script: |
