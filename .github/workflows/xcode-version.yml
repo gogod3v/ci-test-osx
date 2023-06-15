@@ -4,9 +4,12 @@ on: [push]
 
 jobs:
   build:
-    runs-on: macOS-latest
+    # docs:
+    # - https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
+    # - https://github.com/actions/runner-images/blob/main/images/macos/macos-13-Readme.md#xcode
+    runs-on: macos-13
     env:
-      DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer 
+      DEVELOPER_DIR: /Applications/Xcode_14.3.1.app/Contents/Developer 
 
     steps:
     # - uses: actions/checkout@v1
