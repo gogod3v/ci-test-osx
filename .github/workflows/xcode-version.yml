@@ -9,7 +9,9 @@ jobs:
       DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer 
 
     steps:
-    - uses: actions/checkout@v1
+    # - uses: actions/checkout@v1
+    - name: macos version
+      run: sw_vers
     - name: available xcodes
       run: ls -alh /Applications | grep -i 'Xcode*'
     - name: xcodebuild version
