@@ -2,13 +2,13 @@
 #
 # Available images: https://circleci.com/docs/2.0/testing-ios/
 #
-version: 2
+version: 2.1
 jobs:
   build:
 
     # Specify the Xcode version to use
     macos:
-      xcode: "15.2.0"
+      xcode: "26.2.0"
 
     steps:
       - checkout
